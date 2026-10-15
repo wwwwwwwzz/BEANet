@@ -31,6 +31,7 @@ class SpectralResidualUnit(nn.Module):
 
 
 class SPRNStyleRawHead(nn.Module):
+    """Grouped spectral residual classifier inspired by SPRN."""
 
     def __init__(
         self,

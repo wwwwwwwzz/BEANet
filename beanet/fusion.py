@@ -74,7 +74,7 @@ class BioOpticalDescriptor(nn.Module):
 
 
 class SpectralStateEncoder(nn.Module):
-    """Summarize mean spectra with gated depthwise one-dimensional convolutions."""
+    """Mamba-inspired spectral summary using gated depthwise 1-D convolutions."""
 
     def __init__(self, out_dim: int = 32, hidden_dim: int = 48, kernel_size: int = 9):
         super().__init__()

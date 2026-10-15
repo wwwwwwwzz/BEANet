@@ -45,10 +45,11 @@ Raw sensor calibration and spectral normalization must be handled before calling
 The example uses randomly initialized weights and synthetic inputs.
 
 The model contains a wavelet-based reflectance branch, a spectral-spatial fluorescence branch,
-and four interaction experts. Bio-optical statistics and a gated spectral convolution encoder
+and four interaction experts. Bio-optical statistics and a Mamba-inspired gated spectral convolution encoder
 condition expert routing. A separate descriptor projection weights the interaction, reflectance,
 and fluorescence decision sources at the output stage. The spectral encoder uses PyTorch
-convolutions and does not require a Mamba package.
+convolutions and does not require a Mamba package. The single-modality decision heads use an
+SPRN-inspired grouped spectral residual design.
 
 Diagnostic outputs include:
 
